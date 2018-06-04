@@ -24,6 +24,7 @@ class ApplicationController < Sinatra::Base
 
       if session[:user_id] != nil
         @user = User.find(session[:user_id])
+        binding.pry
         erb :account
       else
         # binding.pry
