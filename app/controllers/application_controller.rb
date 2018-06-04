@@ -22,10 +22,11 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     @user = User.find(session[:user_id])
+        binding.pry
       if @user
         erb :account
       else
-        binding.pry
+    
         redirect to '/error'
       end
   end
