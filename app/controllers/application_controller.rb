@@ -37,7 +37,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/error' do
-    binding.pry
+
     erb :error
   end
 
